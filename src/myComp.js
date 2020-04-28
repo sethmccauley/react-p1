@@ -7,7 +7,7 @@ function MyComp(props) {
 
     return (
         <div>
-            <h2 onClick={myOnClick}>Hi there, from my component. Count from hoc: {props.count}</h2>
+            <h2 onClick={props.increment}>Hi there, from my component. Count from hoc: {props.count}</h2>
         </div>
     );
 }
