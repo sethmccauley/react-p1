@@ -23,7 +23,7 @@ function App() {
       <div>
         <h2 onClick={myOnClickCount}>Hello World: count @ {count}</h2>
         <h2 onClick={myOnClickIndex}>Second Heading: index {index}</h2>
-        <MyComp />
+        <MyComp count={count} increment={myOnClickCount}/>
       </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

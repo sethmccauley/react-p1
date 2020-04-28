@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function MyComp() {
-    const [count, setCount] = useState(1000);
-
+function MyComp(props) {
     function myOnClick() {
-        setCount(count + 1)
+        console.log('Clicked from component.')
     }
 
     return (
         <div>
-            <h2 onClick={myOnClick}>Hi there, from my component. Local Count: {count}</h2>
+            <h2 onClick={myOnClick}>Hi there, from my component. Count from hoc: {props.count}</h2>
         </div>
     );
 }
