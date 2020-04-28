@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import MyComp from './myComp'
 import './App.css';
+
+let index = 20;
 
 function App() {
   const [count, setCount] = useState(10);
 
-  function myOnClick(e) {
+  function myOnClickCount(e) {
     setCount(count + 1)
     console.log('Clicked.', count)
+  }
+
+  function myOnClickIndex() {
+    index++;
+    console.log('Clicked.', index)
   }
 
   return (
     <div className="App">
       <div>
-        <h2 onClick={myOnClick}>Hello World {count}</h2>
+        <h2 onClick={myOnClickCount}>Hello World: count @ {count}</h2>
+        <h2 onClick={myOnClickIndex}>Second Heading: index {index}</h2>
+        <MyComp />
       </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
